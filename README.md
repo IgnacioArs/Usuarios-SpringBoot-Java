@@ -33,8 +33,8 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/nombre-repo.git
-   cd nombre-repo
+   git clone https://github.com/IgnacioArs/Usuarios-SpringBoot-Java.git
+   cd usuarios
 
 ### Compilar el proyecto:
 
