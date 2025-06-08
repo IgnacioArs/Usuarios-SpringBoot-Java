@@ -43,6 +43,7 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 ### ▶️ Ejecución
 
 - gradlew.bat bootRun
+- usar este JDBC:jdbc:h2:mem:usuariosdb, URL en el login H2 INTERFACE DE LA SIGUIENTE URL
 - Esta es la interface H2: http://localhost:8080/h2-ui/
 
 ### 🧪 Pruebas Unitarias
