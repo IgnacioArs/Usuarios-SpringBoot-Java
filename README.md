@@ -42,7 +42,8 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 
 ### ▶️ Ejecución
 
-./gradlew bootRun
+- gradlew.bat bootRun
+- Esta es la interface H2: http://localhost:8080/h2-ui/
 
 ### 🧪 Pruebas Unitarias
 - Se utilizan pruebas con JUnit 5 para los servicios.
@@ -56,7 +57,7 @@ Cobertura mínima del 80% en UserService.
 
 src/
  └── main/
-     ├── java/com/evaluacion/
+     ├── java/com/evaluacion/usuarios/
      │   ├── controller/
      │   ├── dto/
      │   ├── entity/
