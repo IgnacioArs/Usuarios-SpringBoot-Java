@@ -44,6 +44,7 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 
 - gradlew.bat bootRun
 - usar este JDBC:jdbc:h2:mem:usuariosdb, URL en el login H2 INTERFACE DE LA SIGUIENTE URL
+- CASO DE GENERAR ARCHIVO PARA ALMACENAMIENTO DE DATOS PARA DB H2: jdbc:h2:file:~/testdb
 - Esta es la interface H2: http://localhost:8080/h2-ui/
 - Swagger Docs : http://localhost:8080/swagger-ui/index.html
 
