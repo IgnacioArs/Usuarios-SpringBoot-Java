@@ -18,6 +18,8 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 - Lombok
 - JUnit 5
 - Gradle 7.4
+- JaCoCo
+- Swagger
 
 ---
 
@@ -48,11 +50,10 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 - Esta es la interface H2: http://localhost:8080/h2-ui/
 - Swagger Docs : http://localhost:8080/swagger-ui/index.html
 
-### 🧪 Pruebas Unitarias
+### 🧪 Pruebas Unitarias - reporte de cobertura - build
 - Se utilizan pruebas con JUnit 5 para los servicios.
-
 - Ejecutar pruebas con:
-./gradlew test
+./gradlew test     -    gradlew test jacocoTestReport
 
 Cobertura mínima del 80% en UserService.
 
