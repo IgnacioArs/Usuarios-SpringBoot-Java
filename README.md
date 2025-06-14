@@ -20,6 +20,7 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 - Gradle 7.4
 - JaCoCo
 - Swagger
+- Mockito
 
 ---
 
