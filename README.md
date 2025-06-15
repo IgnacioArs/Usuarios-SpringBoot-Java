@@ -54,7 +54,7 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 ### 🧪 Pruebas Unitarias - reporte de cobertura - build
 - Se utilizan pruebas con JUnit 5 para los servicios.
 - Ejecutar pruebas con:
-- PRUEBAS UNITARIAS:(./gradlew test / gradlew check)     - PRUEBAS COBERTURA  gradlew test jacocoTestReport
+- PRUEBAS UNITARIAS:(./gradlew test / gradlew check / gradlew.bat clean test jacocoTestReport)  - PRUEBAS COBERTURA  gradlew test jacocoTestReport
 
 Cobertura mínima del 80% en UserService.
 
