@@ -54,9 +54,20 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 ### 🧪 Pruebas Unitarias - reporte de cobertura - build
 - Se utilizan pruebas con JUnit 5 para los servicios.
 - Ejecutar pruebas con:
-- PRUEBAS UNITARIAS:(./gradlew test / gradlew check / gradlew.bat clean test jacocoTestReport)  - PRUEBAS COBERTURA  gradlew test jacocoTestReport
-- PRUEBAS UNITARIAS PARA REFRESCAR DEPENDENCIAS: gradlew.bat clean build --refresh-dependencies  /  LUEGO: gradlew.bat test jacocoTestReport
-- ARCHIVO DE COBERTURA: build/reports/jacoco/test/html/index.html
+- gradlew.bat clean clean/test
+     - clean: Borra la carpeta build/ para garantizar que no haya archivos antiguos o cacheados.
+     - test: Ejecuta todas las pruebas unitarias definidas con JUnit.
+- gradlew.bat test jacocoTestReport
+     - test: Ejecuta las pruebas unitarias.
+     - jacocoTestReport: Genera el reporte de cobertura de código usando JaCoCo.
+     - build/reports/jacoco/test/html/index.html  <-- reporte
+- gradlew.bat clean build --refresh-dependencies
+     - clean: Limpia el proyecto (como en el punto 1).
+     - build: Compila el proyecto, ejecuta pruebas y genera artefactos (como el .jar o .war).
+     - --refresh-dependencies: Fuerza la descarga de dependencias actualizadas desde los repositorios configurados.
+- gradlew.bat check
+     - test (pruebas unitarias),
+     - jacocoTestReport (si está configurado en check.dependsOn),
 
 Cobertura mínima del 80% en UserService.
 
