@@ -1,0 +1,90 @@
+### Crear un nuevo usuario (con Basic Auth requerida globalmente)
+POST http://localhost:8080/sign-up
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic test test123
+
+{
+  "name": "Juanaaaaaa",
+  "email": "juanaaaaaa@example.com",
+  "password": "Abcdef12",
+  "phones": [
+    {
+      "number": 1234567,
+      "citycode": 1,
+      "countrycode": "57"
+    },
+    {
+      "number": 1234567,
+      "citycode": 1,
+      "countrycode": "57"
+    }
+  ]
+}
+
+### Login con token válido
+POST http://localhost:8080/login
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuYWFhYWFhQGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwMTAxMjI1LCJleHAiOjE3NTAxMDE1MjV9.1t0ZXxP7GRniBQ_n5ackMYCQd2mQ2rW3hsWx8YSPBXH0gN2fOuWAcbWFTQncwEMWslqzKhZhNGXHx8I9zw5GSg
+Accept: application/json
+Content-Type: application/json
+
+### Obtener profile
+GET http://localhost:8080/profile
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqdWFuYWFhYWFhQGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwMTAxMjI1LCJleHAiOjE3NTAxMDE1MjV9.1t0ZXxP7GRniBQ_n5ackMYCQd2mQ2rW3hsWx8YSPBXH0gN2fOuWAcbWFTQncwEMWslqzKhZhNGXHx8I9zw5GSg
+
+
+### Obtener todos los usuarios
+GET http://localhost:8080/users/getAllUsers
+Content-Type: application/json
+Accept: application/json
+Authorization: Basic test test123
+
+
+### Crear un nuevo usuario
+POST http://localhost:8080/users/createUser
+Content-Type: application/json
+Authorization: Basic test test123
+
+{
+  "name": "Juanaaaaaaaa",
+  "email": "juanaaaaaaaaa@example.com",
+  "password": "Abcdef12",
+  "phones": [
+    {
+      "number": 1234567,
+      "citycode": 1,
+      "countrycode": "57"
+    }
+  ]
+}
+
+
+### Obtener un usuario por ID
+GET http://localhost:8080/users/getUserById/c739af3d-a6f3-4e50-a2d2-7256199c7058
+Content-Type: application/json
+Authorization: Basic test test123
+
+### Actualizar un usuario existente
+PUT http://localhost:8080/users/updateUser/c739af3d-a6f3-4e50-a2d2-7256199c7058
+Content-Type: application/json
+Authorization: Basic test test123
+
+{
+  "name": "Juan Actualizado",
+  "email": "juan.perez@example.com",
+  "password": "A1b2c3d4",
+  "phones": [
+    {
+      "number": 111111111,
+      "citycode": 7,
+      "countrycode": "57"
+    }
+  ]
+}
+
+### Eliminar un usuario
+DELETE http://localhost:8080/users/deleteUser/c739af3d-a6f3-4e50-a2d2-7256199c7058
+Authorization: Basic test test123
+
