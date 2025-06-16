@@ -135,5 +135,4 @@ Ver la carpeta springboot/diagramas para:
 
 📌 Diagrama de Secuencia
 
-### 📘 Licencia
-MIT
+
