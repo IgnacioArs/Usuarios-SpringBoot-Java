@@ -70,6 +70,8 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
      - jacocoTestReport (si está configurado en check.dependsOn),
 
 Cobertura mínima del 80% en UserService.
+### 🧪 RESULTADO
+![covertura](https://github.com/user-attachments/assets/6703a1ac-9782-4560-83b2-0fdab1044b60)
 
 ### 📂 Estructura del Proyecto
 
