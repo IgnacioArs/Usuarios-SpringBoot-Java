@@ -13,16 +13,36 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 - Spring Boot 2.5.14
 - Spring Web
 - Spring Data JPA
-- Spring Security (JWT)
-- H2 Database (in-memory)
+- Spring Security (JWT) y OAuth2
+- H2 Database (in-memory) (File)
 - Lombok
 - JUnit 5
 - Gradle 7.4
 - JaCoCo
 - Swagger
 - Mockito
+  
 
 ---
+
+
+## 📦 Endpoints Principales
+- `POST /sign-up`: Registro de nuevo usuario
+- `POST /login`: Login del usuario
+- `POST /users/register`: Registro de nuevo usuario
+- `POST /users/login`: Login del usuario
+- `GET /users/{id}`: Obtener usuario por ID
+- `PUT /users/updateUser/{id}`: Actualizar datos de usuario
+- `DELETE /users/{id}`: Eliminar usuario
+
+## ✅ Validaciones
+
+- El campo `email` debe ser único y tener formato válido.
+- La `contraseña` debe cumplir con el patrón:
+  - Una letra mayúscula
+  - Dos números
+  - Solo letras y números (sin caracteres especiales)
+  - Longitud entre 8 y 12 caracteres
 
 ## 🚀 Instrucciones para construir y ejecutar el proyecto
 
@@ -60,7 +80,7 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
 - gradlew.bat test jacocoTestReport
      - test: Ejecuta las pruebas unitarias.
      - jacocoTestReport: Genera el reporte de cobertura de código usando JaCoCo.
-     - build/reports/jacoco/test/html/index.html  <-- reporte
+     - build/reports/jacoco/test/html/index.html <-- reporte
 - gradlew.bat clean build --refresh-dependencies
      - clean: Limpia el proyecto (como en el punto 1).
      - build: Compila el proyecto, ejecuta pruebas y genera artefactos (como el .jar o .war).
@@ -69,28 +89,47 @@ Este proyecto es un microservicio desarrollado con **Spring Boot 2.5.14**, **Jav
      - test (pruebas unitarias),
      - jacocoTestReport (si está configurado en check.dependsOn),
 
+### 🔍 Detalles:
+
+- **Cobertura de instrucciones:** 79–82%
+- **Cobertura de ramas:** 80%
+- **Cobertura de métodos y clases clave:** 100% en `service`, `exception`, `config`
 Cobertura mínima del 80% en UserService.
 ### 🧪 RESULTADO
 ![covertura](https://github.com/user-attachments/assets/6703a1ac-9782-4560-83b2-0fdab1044b60)
 
 ### 📂 Estructura del Proyecto
 
+### 📂 Estructura del Proyecto
+
+```
 src/
- └── main/
-     ├── java/com/evaluacion/usuarios/
-     │   ├── controller/
-     │   ├── dto/
-     │   ├── entity/
-     │   ├── exception/
-     │   ├── repository/
-     │   ├── security/
-     │   ├── service/
-     │   └── config/
-     └── resources/
-         └── application.properties
+└── main/
+    ├── java/
+    │   └── com/evaluacion/
+    │       ├── auth/
+    │       │   ├── controller/
+    │       │   └── service/
+    │       └── usuarios/
+    │           ├── config/
+    │           ├── controller/
+    │           ├── dto/
+    │           ├── exception/
+    │           ├── model/
+    │           ├── repository/
+    │           ├── response/
+    │           ├── security/
+    │           └── service/
+    └── resources/
+        └── application.properties
+└── test/
+    └── java/
+        └── com.evaluacion.usuarios/
+```
+
 
 ### 🖼 Diagramas UML
-Ver la carpeta docs/ para:
+Ver la carpeta springboot/diagramas para:
 
 📌 Diagrama de Componentes
 
